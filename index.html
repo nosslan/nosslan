@@ -1,5 +1,32 @@
 <html>
+  <head>
+    <style>
+      body {
+        text-align: center;
+      }
+      textarea {
+        width: 80%;
+      }
+      button {
+        width: 10em;
+      }
+    </style>
+  </head>
   <body>
-    <h1 style="text-align:center">Hello🐻</h1>
+    <h1>Hello🐻</h1>
+    <p>Insert a DNA string below</p>
+       <textarea id="dna_input" cols="40" rows="5"></textarea>
+       <br><br>
+       <button type="button" onClick="displayDNA()">Display DNA</button>
+       <p id="dna_display"></p>
   </body>
 </html>
+
+
+<script>
+  function displayDNA() {
+    const DNA = document.getElementById("dna_input").value;
+    const DNA_display = document.getElementById("dna_display");
+    DNA_display.innerText = DNA;
+  }
+</script>
